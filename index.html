@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    <!-- Primary Meta Tags -->
+    <title>NEXT STEP - Interactive Election Guide | Clear Steps, Simple Guidance</title>
+    <meta name="title" content="NEXT STEP - Interactive Election Guide" />
+    <meta name="description" content="A clean, interactive guide that helps users understand election timelines, voting steps, and common questions. Follow a calm, step-by-step assistant for registration, timelines, voting day, and post-election information." />
+    <meta name="keywords" content="election guide, voting, registration, ballot, candidates, election timeline, voting steps, election FAQ" />
+    <meta name="author" content="NEXT STEP" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="theme-color" content="#2563eb" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="canonical" href="https://nextstep-elections.org/index.html" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://nextstep-elections.org/index.html" />
+    <meta property="og:title" content="NEXT STEP - Interactive Election Guide" />
+    <meta property="og:description" content="A clean, interactive guide that helps users understand election timelines, voting steps, and common questions." />
+    <meta property="og:image" content="https://nextstep-elections.org/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="NEXT STEP" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://nextstep-elections.org/index.html" />
+    <meta property="twitter:title" content="NEXT STEP - Interactive Election Guide" />
+    <meta property="twitter:description" content="A clean, interactive guide that helps users understand election timelines, voting steps, and common questions." />
+    <meta property="twitter:image" content="https://nextstep-elections.org/og-image.png" />
+    
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json" />
+    <link rel="apple-touch-icon" href="icons/icon-192x192.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="NEXT STEP" />
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css" />
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "NEXT STEP - Election Guide",
+      "description": "An interactive election guide that helps users understand election timelines, voting steps, and common questions.",
+      "url": "https://nextstep-elections.org",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "NEXT STEP"
+      },
+      "featureList": [
+        "Election timeline visualization",
+        "Step-by-step voting guide",
+        "Ballot builder",
+        "Candidate comparison",
+        "FAQ and help resources"
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I know if I am registered?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Check your registration status with the official election office for your area."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What should I bring on election day?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Bring any required identification, your notes, and enough time to complete the process calmly."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens after I vote?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ballots are counted, results are reported, and then official certification follows after the process is complete."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <!-- Defer JavaScript for Performance -->
+    <script defer src="script.js"></script>
+  </head>
+  <body data-page="home">
+    <!-- Skip Navigation Link for Accessibility -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    
+    <header class="site-header" role="banner">
+      <div class="container">
+        <div class="header-inner">
+          <a class="brand" href="index.html" aria-label="NEXT STEP home">
+            <span class="brand-logo" aria-hidden="true">NS</span>
+            <span class="brand-text">
+              <span class="brand-name">NEXT STEP</span>
+              <span class="brand-tagline">Clear steps. Simple guidance.</span>
+            </span>
+          </a>
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+          <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+            <a class="nav-link active" href="index.html" aria-current="page">Home</a>
+            <a class="nav-link" href="ballot.html">Ballot</a>
+            <a class="nav-link" href="candidates.html">Candidates</a>
+            <a class="nav-link" href="logistics.html">Logistics</a>
+            <a class="nav-link" href="timeline.html">Timeline</a>
+            <a class="nav-link" href="steps.html">Steps</a>
+            <a class="nav-link" href="faq.html">FAQ</a>
+            <a class="nav-link" href="help.html">Help</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content" role="main">
+      <section class="hero" aria-labelledby="hero-heading">
+        <div class="container">
+          <div class="hero-inner">
+            <div class="hero-content">
+              <span class="eyebrow">Interactive election guide</span>
+              <h1 id="hero-heading" class="hero-title">Understand the election process without the confusion.</h1>
+              <p class="hero-description">
+                Follow a calm, step-by-step assistant that explains registration,
+                timelines, voting day, and what happens after the election.
+              </p>
+              <div class="hero-actions">
+                <a class="btn btn--primary btn--lg" href="#assistant">Start the assistant</a>
+                <a class="btn btn--secondary btn--lg" href="timeline.html">View the timeline</a>
+              </div>
+              <div class="hero-features" aria-label="Key benefits">
+                <span class="hero-feature">✓ Easy to follow</span>
+                <span class="hero-feature">✓ Mobile friendly</span>
+                <span class="hero-feature">✓ Always up to date</span>
+              </div>
+            </div>
+            <div class="hero-panel" aria-label="Quick overview">
+              <div class="card card--accent">
+                <div class="card-header">
+                  <h2 class="card-title">What you will learn</h2>
+                </div>
+                <div class="card-body">
+                  <ul style="padding-left: 1.25rem; list-style: disc;">
+                    <li>When to prepare</li>
+                    <li>How voting day works</li>
+                    <li>What to do after casting a ballot</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">
+                  <h3 class="card-title" style="font-size: 1.125rem;">Fast path</h3>
+                </div>
+                <div class="card-body">
+                  <p>Use the assistant below to get the next best step in seconds.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="info-heading">
+        <div class="container">
+          <h2 id="info-heading" class="sr-only">Election Information</h2>
+          <div class="grid grid--3">
+            <article class="card">
+              <div class="card-header">
+                <h2 class="card-title">Before election day</h2>
+              </div>
+              <div class="card-body">
+                <p>Check your registration, confirm your location, and note deadlines early.</p>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card-header">
+                <h2 class="card-title">On election day</h2>
+              </div>
+              <div class="card-body">
+                <p>Bring the right identification, know where to go, and arrive with time to spare.</p>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card-header">
+                <h2 class="card-title">After voting</h2>
+              </div>
+              <div class="card-body">
+                <p>Track results responsibly and understand how counting and certification work.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="assistant" aria-labelledby="assistant-heading" style="background: var(--bg-secondary);">
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow">Guided assistant</span>
+            <h2 id="assistant-heading" class="section-title">Choose what you need help with.</h2>
+            <p class="section-description">Each option updates the guidance panel with a simple next-step plan.</p>
+          </div>
+
+          <div class="grid grid--2">
+            <div class="assistant-options" role="tablist" aria-label="Assistant topics">
+              <button class="btn btn--secondary" type="button" data-assistant-topic="register" role="tab" aria-selected="true" aria-controls="assistant-panel" style="justify-content: flex-start; text-align: left;">
+                I need to register
+              </button>
+              <button class="btn btn--secondary" type="button" data-assistant-topic="vote" role="tab" aria-selected="false" aria-controls="assistant-panel" style="justify-content: flex-start; text-align: left;">
+                I want to vote
+              </button>
+              <button class="btn btn--secondary" type="button" data-assistant-topic="results" role="tab" aria-selected="false" aria-controls="assistant-panel" style="justify-content: flex-start; text-align: left;">
+                I need results info
+              </button>
+            </div>
+
+            <div class="card" id="assistant-panel" role="tabpanel" aria-live="polite">
+              <p class="eyebrow" style="margin-bottom: 0.5rem;">Next step</p>
+              <h3 data-answer-title style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem;">Check your registration status first.</h3>
+              <p data-answer-copy style="color: var(--text-secondary); margin-bottom: 1rem;">
+                Start by confirming you are registered and that your details are
+                current. If something changed, update it before deadlines close.
+              </p>
+              <ol data-answer-list style="padding-left: 1.25rem; list-style: decimal; color: var(--text-secondary); margin-bottom: 1.5rem;">
+                <li>Confirm your name and address.</li>
+                <li>Check the deadline for registration changes.</li>
+                <li>Save a reminder for election day.</li>
+              </ol>
+              <div class="flex gap-3" style="flex-wrap: wrap;">
+                <a class="btn btn--primary" href="steps.html">Follow the full steps</a>
+                <a class="btn btn--secondary" href="faq.html">See common questions</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="assistant" class="section assistant-section" aria-labelledby="assistant-heading">
+        <div class="container">
+          <div class="assistant-wrapper">
+            <div class="assistant-content">
+              <h2 id="assistant-heading" class="section-title">Your Step-by-Step Assistant</h2>
+              <p class="section-description">
+                Use this interactive guide to get clear, simple answers. Choose a topic to see the next best step, or ask the chatbot a specific question.
+              </p>
+              <div class="assistant-topics" role="tablist" aria-labelledby="assistant-heading">
+                <button role="tab" class="btn btn--secondary" data-assistant-topic="register" aria-selected="true">Register</button>
+                <button role="tab" class="btn btn--secondary" data-assistant-topic="vote">Vote</button>
+                <button role="tab" class="btn btn--secondary" data-assistant-topic="results">Results</button>
+              </div>
+              <div class="assistant-answer card" role="tabpanel">
+                <h3 class="card-title" data-answer-title>Check your registration status first.</h3>
+                <p data-answer-copy>Start by confirming your registration and making sure your address and name are current. This avoids problems later in the process.</p>
+                <ul data-answer-list>
+                  <li>Confirm your name and address.</li>
+                  <li>Check the deadline for registration changes.</li>
+                  <li>Save a reminder for election day.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="assistant-chatbot">
+              </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="container">
+        <div class="footer-inner">
+          <p class="footer-text">NEXT STEP. Built to make the process easier to follow.</p>
+          <a class="footer-link" href="timeline.html">Jump to timeline →</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

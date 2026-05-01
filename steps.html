@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    <!-- Primary Meta Tags -->
+    <title>Election Steps Checklist | NEXT STEP - Election Guide</title>
+    <meta name="title" content="Election Steps Checklist | NEXT STEP" />
+    <meta name="description" content="A practical checklist that walks users through the election process step by step. Track your progress as you move through each step." />
+    <meta name="keywords" content="election checklist, voting steps, election process, voter guide" />
+    <meta name="author" content="NEXT STEP" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#2563eb" />
+    <link rel="canonical" href="https://nextstep-elections.org/steps.html" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://nextstep-elections.org/steps.html" />
+    <meta property="og:title" content="Election Steps Checklist | NEXT STEP" />
+    <meta property="og:description" content="A practical checklist that walks users through the election process step by step." />
+    <meta property="og:image" content="https://nextstep-elections.org/og-image.png" />
+    <meta property="og:locale" content="en_US" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://nextstep-elections.org/steps.html" />
+    <meta property="twitter:title" content="Election Steps Checklist | NEXT STEP" />
+    <meta property="twitter:description" content="A practical checklist that walks users through the election process step by step." />
+    <meta property="twitter:image" content="https://nextstep-elections.org/og-image.png" />
+    
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json" />
+    <link rel="apple-touch-icon" href="icons/icon-192x192.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="NEXT STEP" />
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css" />
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Election Steps Checklist",
+      "description": "A practical checklist that walks users through the election process step by step.",
+      "url": "https://nextstep-elections.org/steps.html",
+      "isPartOf": {
+        "@type": "WebApplication",
+        "name": "NEXT STEP - Election Guide"
+      }
+    }
+    </script>
+    
+    <script defer src="script.js"></script>
+  </head>
+  <body data-page="steps">
+    <!-- Skip Navigation Link for Accessibility -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    
+    <header class="site-header" role="banner">
+      <div class="container">
+        <div class="header-inner">
+          <a class="brand" href="index.html" aria-label="NEXT STEP home">
+            <span class="brand-logo" aria-hidden="true">NS</span>
+            <span class="brand-text">
+              <span class="brand-name">NEXT STEP</span>
+              <span class="brand-tagline">Clear steps. Simple guidance.</span>
+            </span>
+          </a>
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+          <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="ballot.html">Ballot</a>
+            <a class="nav-link" href="candidates.html">Candidates</a>
+            <a class="nav-link" href="logistics.html">Logistics</a>
+            <a class="nav-link" href="timeline.html">Timeline</a>
+            <a class="nav-link active" href="steps.html" aria-current="page">Steps</a>
+            <a class="nav-link" href="faq.html">FAQ</a>
+            <a class="nav-link" href="help.html">Help</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content" role="main">
+      <section class="page-hero" aria-labelledby="steps-heading">
+        <div class="container">
+          <span class="eyebrow">Election Checklist</span>
+          <h1 id="steps-heading" class="page-hero-title">Track your progress as you move through each step.</h1>
+          <p class="page-hero-description">Check items as you go and use the buttons to manage your plan.</p>
+          <div class="flex gap-3 mt-6" style="flex-wrap: wrap;">
+            <button class="btn btn--primary" type="button" data-action="mark-all" aria-label="Mark all steps as complete">
+              Mark all complete
+            </button>
+            <button class="btn btn--secondary" type="button" data-action="reset-all" aria-label="Reset all checklist items">
+              Reset checklist
+            </button>
+            <button class="btn btn--secondary" type="button" data-action="copy-summary" aria-label="Copy checklist summary to clipboard">
+              Copy summary
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="progress-heading">
+        <div class="container container--narrow">
+          <div class="card">
+            <div class="progress-header">
+              <h2 id="progress-heading" class="progress-label">Progress</h2>
+              <span class="progress-value"><span data-progress-count>0</span> of <span data-progress-total>5</span> complete</span>
+            </div>
+            <div class="progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Checklist progress">
+              <div class="progress-bar" data-progress-fill style="width: 0%;"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" style="padding-top: 0;" aria-labelledby="checklist-heading">
+        <div class="container container--narrow">
+          <h2 id="checklist-heading" class="sr-only">Election Checklist</h2>
+          <div class="checklist">
+            <label class="checklist-item">
+              <input type="checkbox" data-step-check />
+              <div class="checklist-item-content">
+                <div class="checklist-item-title">Confirm registration</div>
+                <div class="checklist-item-description">Make sure your details are current before deadlines.</div>
+              </div>
+            </label>
+            <label class="checklist-item">
+              <input type="checkbox" data-step-check />
+              <div class="checklist-item-content">
+                <div class="checklist-item-title">Find your voting location</div>
+                <div class="checklist-item-description">Know where to go and how to get there.</div>
+              </div>
+            </label>
+            <label class="checklist-item">
+              <input type="checkbox" data-step-check />
+              <div class="checklist-item-content">
+                <div class="checklist-item-title">Review voting rules</div>
+                <div class="checklist-item-description">Check required identification and any local instructions.</div>
+              </div>
+            </label>
+            <label class="checklist-item">
+              <input type="checkbox" data-step-check />
+              <div class="checklist-item-content">
+                <div class="checklist-item-title">Vote on election day</div>
+                <div class="checklist-item-description">Bring what you need and leave time for lines.</div>
+              </div>
+            </label>
+            <label class="checklist-item">
+              <input type="checkbox" data-step-check />
+              <div class="checklist-item-content">
+                <div class="checklist-item-title">Follow official results</div>
+                <div class="checklist-item-description">Use trusted sources until counting is complete.</div>
+              </div>
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" style="padding-top: 0;">
+        <div class="container container--narrow">
+          <div class="note-banner">
+            <div class="note-banner-content">
+              <h2 class="note-banner-title">Want quick answers while you work?</h2>
+              <p class="note-banner-description">The FAQ page explains common questions in a simple accordion format.</p>
+            </div>
+            <a class="btn btn--primary" href="faq.html">Open FAQ</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="container">
+        <div class="footer-inner">
+          <p class="footer-text">Checklist progress updates automatically as you check items.</p>
+          <a class="footer-link" href="index.html#assistant">Return to assistant →</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Election Timeline | NEXT STEP - Election Guide</title>
+    <meta name="description" content="A simple election timeline that highlights the main phases before, during, and after election day. See the process in the order it actually happens." />
+    <meta name="theme-color" content="#2563eb" />
+    <link rel="canonical" href="https://nextstep-elections.org/timeline.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://nextstep-elections.org/timeline.html" />
+    <meta property="og:title" content="Election Timeline | NEXT STEP" />
+    <meta property="og:description" content="A simple election timeline that highlights the main phases before, during, and after election day." />
+    <meta property="og:image" content="https://nextstep-elections.org/og-image.png" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://nextstep-elections.org/timeline.html" />
+    <meta property="twitter:title" content="Election Timeline | NEXT STEP" />
+    <meta property="twitter:description" content="A simple election timeline that highlights the main phases before, during, and after election day." />
+    <meta property="twitter:image" content="https://nextstep-elections.org/og-image.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="apple-touch-icon" href="icons/icon-192x192.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Election Timeline","description":"A simple election timeline that highlights the main phases before, during, and after election day.","url":"https://nextstep-elections.org/timeline.html","isPartOf":{"@type":"WebApplication","name":"NEXT STEP - Election Guide"}}</script>
+    <script defer src="script.js"></script>
+  </head>
+  <body data-page="timeline">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header" role="banner">
+      <div class="container">
+        <div class="header-inner">
+          <a class="brand" href="index.html" aria-label="NEXT STEP home">
+            <span class="brand-logo" aria-hidden="true">NS</span>
+            <span class="brand-text">
+              <span class="brand-name">NEXT STEP</span>
+              <span class="brand-tagline">Clear steps. Simple guidance.</span>
+            </span>
+          </a>
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </button>
+          <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="ballot.html">Ballot</a>
+            <a class="nav-link" href="candidates.html">Candidates</a>
+            <a class="nav-link" href="logistics.html">Logistics</a>
+            <a class="nav-link active" href="timeline.html" aria-current="page">Timeline</a>
+            <a class="nav-link" href="steps.html">Steps</a>
+            <a class="nav-link" href="faq.html">FAQ</a>
+            <a class="nav-link" href="help.html">Help</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main id="main-content" role="main">
+      <section class="page-hero" aria-labelledby="timeline-heading">
+        <div class="container">
+          <span class="eyebrow">Election Timeline</span>
+          <h1 id="timeline-heading" class="page-hero-title">See the process in the order it actually happens.</h1>
+          <p class="page-hero-description">Use the filter buttons to focus on the phase you care about right now.</p>
+          <div class="flex gap-3 mt-6" style="flex-wrap: wrap;" role="group" aria-label="Timeline filter options">
+            <button class="btn btn--primary" type="button" data-timeline-filter="all" aria-pressed="true">All phases</button>
+            <button class="btn btn--secondary" type="button" data-timeline-filter="before" aria-pressed="false">Before election</button>
+            <button class="btn btn--secondary" type="button" data-timeline-filter="day" aria-pressed="false">Election day</button>
+            <button class="btn btn--secondary" type="button" data-timeline-filter="after" aria-pressed="false">After election</button>
+          </div>
+        </div>
+      </section>
+      <section class="section" aria-labelledby="phases-heading">
+        <div class="container">
+          <h2 id="phases-heading" class="sr-only">Election Phases</h2>
+          <div class="timeline">
+            <article class="timeline-card" data-stage="before">
+              <span class="timeline-tag">Before election</span>
+              <h2 class="timeline-title">1. Confirm registration</h2>
+              <p class="timeline-description">Verify your details, update your address if needed, and watch the deadline.</p>
+              <button class="btn btn--ghost btn--sm" type="button" data-timeline-filter="before">Show only this phase →</button>
+            </article>
+            <article class="timeline-card" data-stage="before">
+              <span class="timeline-tag">Before election</span>
+              <h2 class="timeline-title">2. Review ballot information</h2>
+              <p class="timeline-description">Learn what will be on the ballot and decide how you want to vote.</p>
+              <button class="btn btn--ghost btn--sm" type="button" data-timeline-filter="before">Focus on preparation →</button>
+            </article>
+            <article class="timeline-card" data-stage="day">
+              <span class="timeline-tag">Election day</span>
+              <h2 class="timeline-title">3. Arrive ready to vote</h2>
+              <p class="timeline-description">Bring any required ID, choose your voting method, and allow enough time.</p>
+              <button class="btn btn--ghost btn--sm" type="button" data-timeline-filter="day">Focus on voting day →</button>
+            </article>
+            <article class="timeline-card" data-stage="after">
+              <span class="timeline-tag">After election</span>
+              <h2 class="timeline-title">4. Wait for counting and certification</h2>
+              <p class="timeline-description">Results may take time. Follow official sources and understand counting steps.</p>
+              <button class="btn btn--ghost btn--sm" type="button" data-timeline-filter="after">Show post-election steps →</button>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section" style="padding-top: 0;">
+        <div class="container">
+          <div class="note-banner">
+            <div class="note-banner-content">
+              <h2 class="note-banner-title">Need the full step list?</h2>
+              <p class="note-banner-description">Move from the timeline to the checklist for an action-first view.</p>
+            </div>
+            <a class="btn btn--primary" href="steps.html">Open steps</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer" role="contentinfo">
+      <div class="container">
+        <div class="footer-inner">
+          <p class="footer-text">Use the filter buttons above to keep the timeline focused.</p>
+          <a class="footer-link" href="faq.html">Go to FAQ →</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Mock Ballot Builder | NEXT STEP - Election Guide</title>
+    <meta name="description" content="Build your personalized ballot, pre-vote your selections, and save as QR code or PDF. Practice voting with our interactive mock ballot builder." />
+    <meta name="theme-color" content="#2563eb" />
+    <link rel="canonical" href="https://nextstep-elections.org/ballot.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://nextstep-elections.org/ballot.html" />
+    <meta property="og:title" content="Mock Ballot Builder | NEXT STEP" />
+    <meta property="og:description" content="Build your personalized ballot, pre-vote your selections, and save as QR code or PDF." />
+    <meta property="og:image" content="https://nextstep-elections.org/og-image.png" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://nextstep-elections.org/ballot.html" />
+    <meta property="twitter:title" content="Mock Ballot Builder | NEXT STEP" />
+    <meta property="twitter:description" content="Build your personalized ballot, pre-vote your selections, and save as QR code or PDF." />
+    <meta property="twitter:image" content="https://nextstep-elections.org/og-image.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Mock Ballot Builder","description":"Build your personalized ballot, pre-vote your selections, and save as QR code or PDF.","url":"https://nextstep-elections.org/ballot.html","isPartOf":{"@type":"WebApplication","name":"NEXT STEP - Election Guide"}}</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode.js/1.5.3/qrcode.min.js" integrity="sha512-4o4M+3H3bTRH8V3kF1kF7V3kF1kF7V3kF1kF7V3kF1kF7V3kF1kF7V3kF1kF7V3kF1kF7V3kF1kF7V3kF1kF7V3k==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script defer src="script.js"></script>
+  </head>
+  <body data-page="ballot">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header" role="banner">
+      <div class="container">
+        <div class="header-inner">
+          <a class="brand" href="index.html" aria-label="NEXT STEP home">
+            <span class="brand-logo" aria-hidden="true">NS</span>
+            <span class="brand-text">
+              <span class="brand-name">NEXT STEP</span>
+              <span class="brand-tagline">Clear steps. Simple guidance.</span>
+            </span>
+          </a>
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </button>
+          <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link active" href="ballot.html" aria-current="page">Ballot</a>
+            <a class="nav-link" href="candidates.html">Candidates</a>
+            <a class="nav-link" href="logistics.html">Logistics</a>
+            <a class="nav-link" href="timeline.html">Timeline</a>
+            <a class="nav-link" href="steps.html">Steps</a>
+            <a class="nav-link" href="faq.html">FAQ</a>
+            <a class="nav-link" href="help.html">Help</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main id="main-content" role="main">
+      <section class="page-hero" aria-labelledby="ballot-heading">
+        <div class="container">
+          <span class="eyebrow">Mock Ballot Builder</span>
+          <h1 id="ballot-heading" class="page-hero-title">Build your ballot before voting day.</h1>
+          <p class="page-hero-description">Review all races and candidates, make your choices, and save as QR code or PDF for the booth.</p>
+          <div class="flex gap-3 mt-6" style="flex-wrap: wrap;">
+            <button class="btn btn--primary" type="button" data-ballot-action="preview" aria-label="Preview your ballot selections">Preview Ballot</button>
+            <button class="btn btn--secondary" type="button" data-ballot-action="reset" aria-label="Clear all ballot selections">Clear Selections</button>
+            <button class="btn btn--secondary" type="button" data-ballot-action="save-qr" aria-label="Save ballot as QR code">Save as QR Code</button>
+          </div>
+        </div>
+      </section>
+      <section class="section" aria-labelledby="ballot-races-heading">
+        <div class="container container--narrow">
+          <div class="section-header">
+            <span class="eyebrow">Your Ballot</span>
+            <h2 id="ballot-races-heading" class="section-title">Make your selections race by race.</h2>
+            <p class="section-description">Click to select a candidate. Your choices update in real-time.</p>
+          </div>
+          <form class="ballot-races" id="ballot-form" aria-label="Ballot selection form">
+            <article class="ballot-race">
+              <h3 class="ballot-race-title">President</h3>
+              <p class="ballot-race-description">Select one candidate.</p>
+              <fieldset class="ballot-options">
+                <legend class="sr-only">President candidates</legend>
+                <label class="ballot-option"><input type="radio" name="president" value="candidate-a" data-ballot-field="president" required /><div class="ballot-option-content"><div class="ballot-option-name">Alice Morgan</div><div class="ballot-option-party">Democratic</div></div></label>
+                <label class="ballot-option"><input type="radio" name="president" value="candidate-b" data-ballot-field="president" /><div class="ballot-option-content"><div class="ballot-option-name">Bob Richardson</div><div class="ballot-option-party">Republican</div></div></label>
+                <label class="ballot-option"><input type="radio" name="president" value="candidate-c" data-ballot-field="president" /><div class="ballot-option-content"><div class="ballot-option-name">Carol Zhang</div><div class="ballot-option-party">Independent</div></div></label>
+              </fieldset>
+            </article>
+            <article class="ballot-race">
+              <h3 class="ballot-race-title">U.S. Senate</h3>
+              <p class="ballot-race-description">Select one candidate.</p>
+              <fieldset class="ballot-options">
+                <legend class="sr-only">Senate candidates</legend>
+                <label class="ballot-option"><input type="radio" name="senate" value="candidate-d" data-ballot-field="senate" required /><div class="ballot-option-content"><div class="ballot-option-name">Diana Chen</div><div class="ballot-option-party">Democratic</div></div></label>
+                <label class="ballot-option"><input type="radio" name="senate" value="candidate-e" data-ballot-field="senate" /><div class="ballot-option-content"><div class="ballot-option-name">Edward Moore</div><div class="ballot-option-party">Republican</div></div></label>
+              </fieldset>
+            </article>
+            <article class="ballot-race">
+              <h3 class="ballot-race-title">Local School Board</h3>
+              <p class="ballot-race-description">Select up to 3 candidates.</p>
+              <fieldset class="ballot-options">
+                <legend class="sr-only">School board candidates</legend>
+                <label class="ballot-option"><input type="checkbox" name="school-board" value="sb-1" data-ballot-field="school-board" /><div class="ballot-option-content"><div class="ballot-option-name">Frank Adams</div><div class="ballot-option-party">Parent advocate</div></div></label>
+                <label class="ballot-option"><input type="checkbox" name="school-board" value="sb-2" data-ballot-field="school-board" /><div class="ballot-option-content"><div class="ballot-option-name">Grace Lee</div><div class="ballot-option-party">Teacher</div></div></label>
+                <label class="ballot-option"><input type="checkbox" name="school-board" value="sb-3" data-ballot-field="school-board" /><div class="ballot-option-content"><div class="ballot-option-name">Henry Brown</div><div class="ballot-option-party">Business owner</div></div></label>
+              </fieldset>
+            </article>
+            <article class="ballot-race">
+              <h3 class="ballot-race-title">City Mayor</h3>
+              <p class="ballot-race-description">Select one candidate.</p>
+              <fieldset class="ballot-options">
+                <legend class="sr-only">Mayor candidates</legend>
+                <label class="ballot-option"><input type="radio" name="mayor" value="mayor-1" data-ballot-field="mayor" required /><div class="ballot-option-content"><div class="ballot-option-name">Iris Jackson</div><div class="ballot-option-party">Incumbent</div></div></label>
+                <label class="ballot-option"><input type="radio" name="mayor" value="mayor-2" data-ballot-field="mayor" /><div class="ballot-option-content"><div class="ballot-option-name">James Wilson</div><div class="ballot-option-party">Challenger</div></div></label>
+              </fieldset>
+            </article>
+          </form>
+        </div>
+      </section>
+      <section class="section" style="padding-top: 0;" aria-labelledby="summary-heading">
+        <div class="container container--narrow">
+          <div class="card">
+            <div class="card-header">
+              <h2 id="summary-heading" class="card-title">Your Ballot Summary</h2>
+              <p class="card-subtitle">What you have selected so far. Review before you go to the voting booth.</p>
+            </div>
+            <div class="summary-list" data-ballot-summary aria-live="polite" style="margin-bottom: 1rem;">
+              <p style="color: var(--text-tertiary);">Your selections will appear here as you choose.</p>
+            </div>
+            <div class="flex gap-3" style="flex-wrap: wrap;">
+              <button class="btn btn--primary" type="button" data-ballot-action="download-pdf" aria-label="Download ballot as PDF">Download as PDF</button>
+              <button class="btn btn--secondary" type="button" data-ballot-action="share-social" aria-label="Share your ballot">Share This Ballot</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section" style="padding-top: 0;" data-ballot-qr hidden aria-labelledby="qr-heading">
+        <div class="container container--narrow">
+          <div class="card text-center">
+            <h2 id="qr-heading" class="card-title">Your Ballot QR Code</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Scan on voting day to pull up your selections on your phone.</p>
+            <div id="ballot-qr-code" role="img" aria-label="QR code of your ballot selections" style="display: inline-flex; justify-content: center; padding: 1.5rem; background: white; border-radius: var(--radius-lg);"></div>
+            <p style="color: var(--text-tertiary); font-size: var(--text-sm); margin-top: 1rem;">Screenshot this or save to your phone to access in the voting booth.</p>
+          </div>
+        </div>
+      </section>
+      <section class="section" style="padding-top: 0;">
+        <div class="container container--narrow">
+          <div class="note-banner">
+            <div class="note-banner-content">
+              <h2 class="note-banner-title">Need candidate details?</h2>
+              <p class="note-banner-description">Check the Candidates page to see each person's platform and endorsements side by side.</p>
+            </div>
+            <a class="btn btn--primary" href="candidates.html">View Candidates</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer" role="contentinfo">
+      <div class="container">
+        <div class="footer-inner">
+          <p class="footer-text">Your ballot selections are saved locally on your device.</p>
+          <a class="footer-link" href="logistics.html">Find your polling station →</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Polling Station & Logistics | NEXT STEP - Election Guide</title>
+    <meta name="description" content="Find your polling station, check wait times, get accessible information, and arrange transportation. Verify your ZIP code and get official election lookup links." />
+    <meta name="theme-color" content="#2563eb" />
+    <link rel="canonical" href="https://nextstep-elections.org/logistics.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://nextstep-elections.org/logistics.html" />
+    <meta property="og:title" content="Polling Station & Logistics | NEXT STEP" />
+    <meta property="og:description" content="Find your polling station, check wait times, get accessible information, and arrange transportation." />
+    <meta property="og:image" content="https://nextstep-elections.org/og-image.png" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://nextstep-elections.org/logistics.html" />
+    <meta property="twitter:title" content="Polling Station & Logistics | NEXT STEP" />
+    <meta property="twitter:description" content="Find your polling station, check wait times, get accessible information, and arrange transportation." />
+    <meta property="twitter:image" content="https://nextstep-elections.org/og-image.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://api.zippopotam.us" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="apple-touch-icon" href="icons/icon-192x192.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Polling Station & Logistics","description":"Find your polling station, check wait times, get accessible information, and arrange transportation.","url":"https://nextstep-elections.org/logistics.html","isPartOf":{"@type":"WebApplication","name":"NEXT STEP - Election Guide"}}</script>
+    <script defer src="script.js"></script>
+  </head>
+  <body data-page="logistics">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header" role="banner">
+      <div class="container">
+        <div class="header-inner">
+          <a class="brand" href="index.html" aria-label="NEXT STEP home">
+            <span class="brand-logo" aria-hidden="true">NS</span>
+            <span class="brand-text">
+              <span class="brand-name">NEXT STEP</span>
+              <span class="brand-tagline">Clear steps. Simple guidance.</span>
+            </span>
+          </a>
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </button>
+          <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="ballot.html">Ballot</a>
+            <a class="nav-link" href="candidates.html">Candidates</a>
+            <a class="nav-link active" href="logistics.html" aria-current="page">Logistics</a>
+            <a class="nav-link" href="timeline.html">Timeline</a>
+            <a class="nav-link" href="steps.html">Steps</a>
+            <a class="nav-link" href="faq.html">FAQ</a>
+            <a class="nav-link" href="help.html">Help</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main id="main-content" role="main">
+      <section class="page-hero" aria-labelledby="logistics-heading">
+        <div class="container">
+          <span class="eyebrow">Voting Logistics</span>
+          <h1 id="logistics-heading" class="page-hero-title">Get to your polling station with confidence.</h1>
+          <p class="page-hero-description">Enter a ZIP code to verify location details and open official election lookup tools.</p>
+          <div class="flex gap-3 mt-6" style="flex-wrap: wrap; align-items: center;">
+            <label for="zip-input" class="sr-only">Enter your ZIP code</label>
+            <input class="chat-input" style="max-width: 200px;" type="text" placeholder="Enter your ZIP code" id="zip-input" inputmode="numeric" maxlength="10" pattern="^\d{5}(-\d{4})?$" aria-label="ZIP code search" aria-describedby="zip-help" autocomplete="postal-code" />
+            <span id="zip-help" class="sr-only">Enter a 5-digit ZIP code or ZIP+4 format</span>
+            <button class="btn btn--primary" type="button" data-logistics-action="search" aria-label="Verify ZIP code">Verify ZIP</button>
+          </div>
+        </div>
+      </section>
+      <section class="section" aria-labelledby="verified-heading">
+        <div class="container">
+          <div class="section-header">
+            <h2 id="verified-heading" class="section-title">Verified Logistics Result</h2>
+            <p class="section-description">We verify ZIP codes using a public postal dataset, then provide official state election lookup links.</p>
+          </div>
+          <p class="logistics-status" data-logistics-status aria-live="polite" style="padding: 1rem; background: var(--bg-tertiary); border-radius: var(--radius-lg); color: var(--text-secondary);">Enter a ZIP code to verify it and load official lookup links.</p>
+          <div data-logistics-results aria-live="polite" class="mt-6"></div>
+        </div>
+      </section>
+      <section class="section" style="padding-top: 0;" aria-labelledby="transport-heading">
+        <div class="container">
+          <div class="section-header">
+            <h2 id="transport-heading" class="section-title">Get to the Polls</h2>
+            <p class="section-description">One-tap options to arrange your ride on election day.</p>
+          </div>
+          <div class="grid grid--3">
+            <div class="card text-center">
+              <div class="card-body">
+                <div style="font-size: 2rem; margin-bottom: 0.5rem;">🚗</div>
+                <h3 class="card-title" style="font-size: 1.125rem;">Rideshare</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 1rem;">Open a destination for your verified ZIP location.</p>
+                <button class="btn btn--primary" type="button" data-logistics-action="ride" aria-label="Get a rideshare to polling location">Get a Ride</button>
+              </div>
+            </div>
+            <div class="card text-center">
+              <div class="card-body">
+                <div style="font-size: 2rem; margin-bottom: 0.5rem;">🚌</div>
+                <h3 class="card-title" style="font-size: 1.125rem;">Public Transit</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 1rem;">Launch transit directions to your verified city center.</p>
+                <button class="btn btn--primary" type="button" data-logistics-action="transit" aria-label="Plan public transit route to polling location">Plan Route</button>
+              </div>
+            </div>
+            <div class="card text-center">
+              <div class="card-body">
+                <div style="font-size: 2rem; margin-bottom: 0.5rem;">🚐</div>
+                <h3 class="card-title" style="font-size: 1.125rem;">Voter Transportation</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 1rem;">Open your official state election office for local ride programs.</p>
+                <button class="btn btn--secondary" type="button" data-logistics-action="official" aria-label="Learn about voter transportation programs">Learn More</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section" style="padding-top: 0;" aria-labelledby="essentials-heading">
+        <div class="container">
+          <div class="section-header">
+            <h2 id="essentials-heading" class="section-title">What to Bring to the Polls</h2>
+            <p class="section-description">Make sure you have everything you need before you go.</p>
+          </div>
+          <div class="grid grid--4">
+            <article class="card text-center">
+              <div class="card-body">
+                <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🪪</div>
+                <h3 style="font-weight: 600; margin-bottom: 0.5rem;">Identification</h3>
+                <p style="font-size: var(--text-sm); color: var(--text-secondary);">Check your state's ID requirements. Some allow utility bills or student ID.</p>
+              </div>
+            </article>
+            <article class="card text-center">
+              <div class="card-body">
+                <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">📋</div>
+                <h3 style="font-weight: 600; margin-bottom: 0.5rem;">Your Ballot Notes</h3>
+                <p style="font-size: var(--text-sm); color: var(--text-secondary);">Keep your saved ballot or PDF/QR code ready to reference in the booth.</p>
+              </div>
+            </article>
+            <article class="card text-center">
+              <div class="card-body">
+                <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">✅</div>
+                <h3 style="font-weight: 600; margin-bottom: 0.5rem;">Registration Confirmation</h3>
+                <p style="font-size: var(--text-sm); color: var(--text-secondary);">Print or screenshot your registration status for easy reference.</p>
+              </div>
+            </article>
+            <article class="card text-center">
+              <div class="card-body">
+                <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">⏰</div>
+                <h3 style="font-weight: 600; margin-bottom: 0.5rem;">Time to Spare</h3>
+                <p style="font-size: var(--text-sm); color: var(--text-secondary);">Arrive early. Expect lines, especially during peak hours (after 5 PM).</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section" style="padding-top: 0;">
+        <div class="container">
+          <div class="note-banner">
+            <div class="note-banner-content">
+              <h2 class="note-banner-title">Questions about access?</h2>
+              <p class="note-banner-description">Our Help Desk team can answer questions about mobility aids, language support, and more.</p>
+            </div>
+            <a class="btn btn--primary" href="help.html">Get Help</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer" role="contentinfo">
+      <div class="container">
+        <div class="footer-inner">
+          <p class="footer-text">Location verification uses Zippopotam.us. Polling-place confirmation must be completed on official state election websites.</p>
+          <a class="footer-link" href="ballot.html">Back to your ballot →</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

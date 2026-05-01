@@ -1,0 +1,15 @@
+# robots.txt for NEXT STEP - Election Guide
+# Allow all search engines to crawl the site
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://nextstep-elections.org/sitemap.xml
+
+# Disallow crawling of service worker and manifest
+Disallow: /sw.js
+Disallow: /manifest.json
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1
